@@ -44,10 +44,10 @@ function AmbientParticles() {
     delay: rand(0, 8),
     duration: rand(8, 18),
     color: i % 3 === 0
-      ? 'rgba(212,175,55,0.6)'
+      ? 'rgba(255,94,0,0.7)'
       : i % 3 === 1
-      ? 'rgba(196,30,58,0.5)'
-      : 'rgba(255,255,255,0.3)',
+      ? 'rgba(255,140,30,0.6)'
+      : 'rgba(255,165,0,0.4)',
   }))
   return (
     <div className="particles-container">
@@ -77,8 +77,8 @@ function ConfettiBurst({ active }) {
     id: i,
     x: rand(20, 80),
     color: [
-      '#D4AF37', '#F5D060', '#C41E3A',
-      '#fff', '#8B0000', '#FFD700', '#FFF1B0',
+      '#FF5E00', '#FF8C1E', '#FFA500',
+      '#FFD700', '#fff', '#FF6B2C', '#FFC857',
     ][Math.floor(rand(0, 7))],
     size: rand(6, 14),
     duration: rand(1.8, 3.5),
@@ -238,6 +238,26 @@ function RevealedTitle({ visible }) {
             >
               ✦ &nbsp; 2026 &nbsp; ✦
             </motion.p>
+
+            <motion.div
+              className="event-details"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 4.3, duration: 1 }}
+            >
+              <p className="event-tagline">Showcasing Student Innovation and Engineering Excellence</p>
+              <div className="event-info">
+                <div className="info-item">
+                  <span className="info-icon">📅</span>
+                  <span>24th March 2026 | Tuesday</span>
+                </div>
+                <div className="info-item">
+                  <span className="info-icon">📍</span>
+                  <span>Kalam Centre | Seminar Hall and Atrium</span>
+                </div>
+              </div>
+              <p className="event-cta">Explore real projects. Meet creators. Get inspired.</p>
+            </motion.div>
           </motion.div>
         </motion.div>
       )}

@@ -6,38 +6,38 @@
 }
 
 :root {
-  --crimson:        #8B0000;
-  --crimson-deep:   #5C0000;
-  --crimson-light:  #C41E3A;
-  --gold:           #D4AF37;
-  --gold-light:     #F5D060;
-  --gold-pale:      #FFF1B0;
-  --black:          #0A0005;
-  --purple-dark:    #0D0115;
-  --purple-mid:     #1A0530;
-  --text-light:     rgba(255,255,255,0.9);
-  --text-muted:     rgba(255,255,255,0.4);
+  --crimson:        #FF5E00;
+  --crimson-deep:   #E64D00;
+  --crimson-light:  #FF8C1E;
+  --gold:           #FFD700;
+  --gold-light:     #FFC857;
+  --gold-pale:      #FFEB99;
+  --black:          #020008;
+  --purple-dark:    #050015;
+  --purple-mid:     #0f0a2e;
+  --text-light:     rgba(255,255,255,0.95);
+  --text-muted:     rgba(255,165,0,0.5);
   --curtain-fabric: linear-gradient(160deg,
-    #7a0000 0%,
-    #9b1212 15%,
-    #6b0000 25%,
-    #8e0e0e 40%,
-    #5a0000 55%,
-    #9e1515 70%,
-    #6f0000 80%,
-    #8b0000 95%,
-    #5c0000 100%
+    #1a0a0a 0%,
+    #2a1515 15%,
+    #0f0a0a 25%,
+    #3a1e1e 40%,
+    #1a0a0a 55%,
+    #2f1515 70%,
+    #1a0a0a 80%,
+    #2a1515 95%,
+    #0f0a0a 100%
   );
   --curtain-fold-l: linear-gradient(90deg,
-    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.5) 0%,
     rgba(0,0,0,0.0) 18%,
-    rgba(255,255,255,0.08) 30%,
+    rgba(255,140,30,0.1) 30%,
     rgba(0,0,0,0.0) 42%,
-    rgba(0,0,0,0.35) 55%,
+    rgba(0,0,0,0.4) 55%,
     rgba(0,0,0,0.0) 68%,
-    rgba(255,255,255,0.06) 80%,
+    rgba(255,140,30,0.08) 80%,
     rgba(0,0,0,0.0) 92%,
-    rgba(0,0,0,0.3) 100%
+    rgba(0,0,0,0.35) 100%
   );
 }
 
