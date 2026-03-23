@@ -196,48 +196,70 @@ function RevealedTitle({ visible }) {
             initial={{ opacity: 0, y: 60, scale: 0.85 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 1.6, duration: 1.4, ease: [0.22, 0.61, 0.36, 1] }}
-            style={{ textAlign: 'center' }}
+            style={{ textAlign: 'center', maxWidth: '90vw' }}
           >
+            {/* College Name */}
+            <motion.p
+              className="strive-college"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 2.0, duration: 1 }}
+            >
+              Providence College of Engineering
+            </motion.p>
+
             <motion.p
               className="strive-intro"
               initial={{ opacity: 0, letterSpacing: '0.6em' }}
               animate={{ opacity: 1, letterSpacing: '0.25em' }}
-              transition={{ delay: 2.2, duration: 1 }}
+              transition={{ delay: 2.4, duration: 1 }}
             >
               Proudly Presents
             </motion.p>
 
-            <div className="strive-divider" style={{ marginTop: 12 }} />
+            <div className="strive-divider" style={{ marginTop: 16 }} />
 
             <motion.h1
               className="strive-title"
               initial={{ opacity: 0, scale: 0.7, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ delay: 2.5, duration: 1.2, ease: [0.22, 0.61, 0.36, 1] }}
+              transition={{ delay: 2.8, duration: 1.2, ease: [0.22, 0.61, 0.36, 1] }}
             >
               STRIVE
             </motion.h1>
 
-            <div className="strive-divider" style={{ marginBottom: 12 }} />
+            <div className="strive-divider" style={{ marginBottom: 16 }} />
 
             <motion.p
               className="strive-subtitle"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 3.2, duration: 0.9 }}
+              transition={{ delay: 3.5, duration: 0.9 }}
             >
               Inauguration Ceremony
             </motion.p>
 
+            {/* Event Description */}
             <motion.p
-              className="strive-intro"
-              style={{ marginTop: 20 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 3.8, duration: 1 }}
+              className="strive-description"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 4.0, duration: 1 }}
             >
-              ✦ &nbsp; 2026 &nbsp; ✦
+              Showcasing student innovation and engineering excellence.
             </motion.p>
+
+            {/* Date */}
+            <motion.div
+              className="strive-date-container"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 4.6, duration: 1, ease: [0.22, 0.61, 0.36, 1] }}
+            >
+              <span className="strive-date-ornament">✦</span>
+              <span className="strive-date">24 March 2026</span>
+              <span className="strive-date-ornament">✦</span>
+            </motion.div>
           </motion.div>
         </motion.div>
       )}
@@ -308,21 +330,6 @@ function CenterStage({ onEnter, curtainOpen }) {
       </AnimatePresence>
 
       <EnterButton onEnter={onEnter} visible={!curtainOpen} />
-
-      <AnimatePresence>
-        {!curtainOpen && (
-          <motion.p
-            className="tagline"
-            style={{ fontSize: '0.6rem', opacity: 0.35 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.35 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1, delay: 1 }}
-          >
-            Press Enter to reveal
-          </motion.p>
-        )}
-      </AnimatePresence>
     </div>
   )
 }
@@ -373,7 +380,7 @@ export default function App() {
       <CurtainPanel side="right" isOpen={curtainOpen} />
 
       {/* Center overlay (button) */}
-      <CenterStage onEnter={handleEnter} curtainOpen={curtainOpen} />
+      {/* Removed per user request */}
 
       {/* Effects */}
       <FlashOverlay flash={flash} />
