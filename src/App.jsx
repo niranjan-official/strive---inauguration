@@ -230,15 +230,7 @@ function RevealedTitle({ visible }) {
 
             <div className="strive-divider" style={{ marginBottom: 16 }} />
 
-            <motion.p
-              className="strive-subtitle"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 3.5, duration: 0.9 }}
-            >
-              Inauguration Ceremony
-            </motion.p>
-
+           
             {/* Event Description */}
             <motion.p
               className="strive-description"
@@ -246,7 +238,7 @@ function RevealedTitle({ visible }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 4.0, duration: 1 }}
             >
-              Showcasing student innovation and engineering excellence.
+              Showcasing student innovation and engineering excellence
             </motion.p>
 
             {/* Date */}
